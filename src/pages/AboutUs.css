@@ -1,0 +1,61 @@
+.about-container {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .about-hero {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 100px 20px;
+    background-image: url('../images/hero2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; 
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in forwards;
+  }
+p{
+  font-size: 18px;
+}  
+  .delay {
+    animation-delay: 0.4s;
+  }
+  
+  .about-section {
+    margin-top: 40px;
+  }
+  
+  .about-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    background: white;
+  }
+  
+  .slide-up {
+    transform: translateY(40px);
+    opacity: 0;
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .delay-2 {
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  

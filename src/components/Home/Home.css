@@ -1,0 +1,322 @@
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Hero Content Styling */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    animation: fadeIn 2s ease-out;
+    margin: 20px 0;
+  }
+  
+  /* Call-to-Action Button Styling */
+  .cta-button {
+    animation: fadeIn 2.5s ease-out;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background: #ff7a00;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.1);
+    background: #ff5722;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hero Background Styling */
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    background-image: url('../../images/hero-bag.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    filter: blur(2px);
+    transition: transform 0.1s ease;
+    will-change: transform;
+  }
+  
+  /* About Section with Flip Animation */
+/* About Section */
+.about-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* About Card */
+  .about-card {
+    background: #fff;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: rotateY(90deg);
+    opacity: 0;
+    transition: all 1s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animation Trigger */
+  .about-card.animate {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  
+  /* Title Styling */
+  .about-card h2 {
+    font-size: 2.25rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Paragraph Styling */
+  .about-card p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scroll Reveal Effect */
+  @keyframes reveal {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Hover Effect on Card */
+  .about-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-card {
+      padding: 30px;
+    }
+    .about-card h2 {
+      font-size: 1.75rem;
+    }
+    .about-card p {
+      font-size: 1rem;
+    }
+  }
+  
+  
+/* HOW IT WORKS SECTION */
+.how-it-works {
+    position: relative;
+    padding: 120px 20px;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+  }
+  
+  /* Parallax Background Layer */
+  .parallax-bg {
+    background-image: url('../../images/hero-bag.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 2.75rem;
+    margin-bottom: 48px;
+    position: relative;
+    display: inline-block;
+    color: #2e7d32;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background: #4caf50;
+    bottom: -12px;
+    left: 20%;
+    transition: width 0.5s ease;
+  }
+  .section-title:hover::after {
+    width: 100%;
+  }
+  
+  /* STEP CARDS */
+  .step-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    padding: 32px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: perspective(600px) translateY(20px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* 3D Hover Effect */
+  .step-card:hover {
+    transform: perspective(600px) translateY(-10px) rotateX(3deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Step Title with Underline Animation */
+  .step-title {
+    position: relative;
+    margin-bottom: 16px;
+    color: #388e3c;
+  }
+  .step-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background: #66bb6a;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+  }
+  .step-card:hover .step-title::after {
+    width: 50%;
+  }
+  
+  /* Step Description Fade-In */
+  .step-desc {
+    font-size: 1rem;
+    color: #555;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: descReveal 0.6s forwards;
+    animation-delay: 0.4s;
+  }
+  
+  /* Description Reveal Keyframes */
+  @keyframes descReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* RESPONSIVE ADJUSTMENTS */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+    .step-card {
+      padding: 24px 16px;
+    }
+  }
+/* CTA Section Container */
+.cta-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Heading with Animated Underline */
+  .cta-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    position: relative;
+    display: inline-block;
+  }
+  .cta-title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background: #ffffff;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+  }
+  .cta-section:hover .cta-title::after {
+    width: 60%;
+  }
+  
+  /* Button Styling */
+  .cta-button {
+    background: linear-gradient(135deg, #ff7a00, #ff5722);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  .cta-button:hover, .cta-button:focus {
+    background: linear-gradient(135deg, #ff5722, #e64a19);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .cta-title {
+      font-size: 2rem;
+    }
+    .cta-button {
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+    }
+  }
+    
